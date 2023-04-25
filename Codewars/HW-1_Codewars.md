@@ -48,4 +48,39 @@ def type_validation(variable, _type):
 def type_validation(variable, _type): 
     return _type in str(type(variable))
 ```
+#### Задача 3.
+Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+remove("Hi!") == "Hi"
+remove("Hi!!!") == "Hi!!"
+remove("!Hi") == "!Hi"
+remove("!Hi!") == "!Hi"
+remove("Hi! Hi!") == "Hi! Hi"
+remove("Hi") == "Hi"
+
+**Решение 1**
+```
+def remove(s):
+    if s.endswith('!'):
+        return s[:len(s)-1]
+    else:
+        return(s)
+```
+**Решение 2**
+```
+def remove(s):
+    return s[:-1] if s.endswith('!') else s
+```
+**Решение 3**
+```
+def remove(s):
+    return s[:-1] if s and s[-1] == '!' else s
+```
+**Решение 4**
+```
+def remove(s):
+    return s.removesuffix('!')
+```
+
+
+
 
