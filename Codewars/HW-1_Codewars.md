@@ -80,6 +80,36 @@ def remove(s):
 def remove(s):
     return s.removesuffix('!')
 ```
+#### Задача 4.
+Your harried co-workers are looking to you for a solution to take this garbled text and remove all of the numbers. Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
+
+'! !'                 -> '! !'
+'123456789'           -> ''
+'This looks5 grea8t!' -> 'This looks great!'
+
+**Решение 1**
+```
+def string_clean(s):
+    st = ''
+    for i in s:
+        if i.isdigit():
+            st = st + ''
+        else:
+            st = st + i
+    return st
+```
+**Решение 2**
+```
+def string_clean(s):
+    return ''.join(i for i in s if not i.isdigit())
+```
+**Решение 3**
+```
+def string_clean(s):
+     for i in '0123456789':
+     s = s.replace(i, '')
+    return s
+```
 
 
 
