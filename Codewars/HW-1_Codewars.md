@@ -110,6 +110,41 @@ def string_clean(s):
      s = s.replace(i, '')
     return s
 ```
+#### Задача 5.
+Write a function which removes from string all non-digit characters and parse the remaining to number. E.g: "hell5o wor6ld" -> 56
+
+**Решение 1**
+```
+def get_number_from_string(string):
+    st=''
+    for i in string:
+        if i.isdigit():
+            st = st + i
+    st = int(st)
+    return st
+```
+**Решение 2**
+```
+def get_number_from_string(string):
+    return int(''.join(x for x in string if x.isdigit()))
+```
+#### Задача 6.
+Create a function named (combine_names) that accepts two parameters (first and last name). The function should return the full name.
+**Решение 1**
+```
+def combine_names(first, last):
+    return first + " " + last
+```
+**Решение 2**
+```
+def combine_names(*args):
+    return ' '.join(args)
+```
+
+
+
+
+
 
 
 
