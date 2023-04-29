@@ -1,5 +1,5 @@
 ## Задачи из Home Work -1.
-#### Задача 1.
+### Задача 1.
 Create a method to see whether the string is ALL CAPS.
 "c" -> False
 "C" -> True
@@ -30,7 +30,7 @@ def is_uppercase(inp):
 def is_uppercase(inp):
     return inp.upper()==inp
 ```
-#### Задача 2.
+### Задача 2.
 Write a function that will accept two parameters: variable and type and check if type of variable is matching type. Return true if types match or false if not.
 42, "int"    --> True
 "42", "int"  --> False
@@ -48,7 +48,7 @@ def type_validation(variable, _type):
 def type_validation(variable, _type): 
     return _type in str(type(variable))
 ```
-#### Задача 3.
+### Задача 3.
 Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
 remove("Hi!") == "Hi"
 remove("Hi!!!") == "Hi!!"
@@ -80,7 +80,7 @@ def remove(s):
 def remove(s):
     return s.removesuffix('!')
 ```
-#### Задача 4.
+### Задача 4.
 Your harried co-workers are looking to you for a solution to take this garbled text and remove all of the numbers. Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
 
 '! !'                 -> '! !'
@@ -110,7 +110,7 @@ def string_clean(s):
      s = s.replace(i, '')
     return s
 ```
-#### Задача 5.
+### Задача 5.
 Write a function which removes from string all non-digit characters and parse the remaining to number. E.g: "hell5o wor6ld" -> 56
 
 **Решение 1**
@@ -128,7 +128,7 @@ def get_number_from_string(string):
 def get_number_from_string(string):
     return int(''.join(x for x in string if x.isdigit()))
 ```
-#### Задача 6.
+### Задача 6.
 Create a function named (combine_names) that accepts two parameters (first and last name). The function should return the full name.
 **Решение 1**
 ```
@@ -140,7 +140,7 @@ def combine_names(first, last):
 def combine_names(*args):
     return ' '.join(args)
 ```
-#### Задача 7.
+### Задача 7.
 You need to write a function that reverses the words in a given string. A word can also fit an empty string. If this is not clear enough, here are some examples:
 As the input may have trailing spaces, you will also need to ignore unneccesary whitespace.
 Example (Input --> Output)
@@ -161,7 +161,7 @@ def reverse(st):
     s = st.split()
     return ' '.join(s[::-1])
 ```
-#### Задача 8.
+### Задача 8.
 Be Concise I - The Ternary Operator
 You are given a function describeAge / describe_age that takes a parameter age (which will always be a positive integer) and does the following:
 
