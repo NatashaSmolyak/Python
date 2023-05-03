@@ -104,3 +104,32 @@ because only one number doesn't divide integer by any of 2, 3, 5
 def real_numbers(n):
     return n - n//2 - n//3 - n//5 + n//6 + n//10 + n//15 - n//30
 ```
+### Задача 5.
+Solve the horror of unstandardized keypads by providing a function that converts computer input to a number as if it was typed on a phone.
+
+Example:
+"789" -> "123"
+Notes:
+You get a string with numbers only
+
+**Решение 1**
+```
+def computer_to_phone(numbers):
+    st = ''
+    for i in numbers:
+        if i in '789':
+            st = st + str(int(i)-6)
+        elif i in '456':
+            st = st + i
+        elif i in '123':
+            st = st + str(int(i)+6)
+        else:
+            st = st + '0'    
+    return st
+
+```
+**Решение 2**
+```
+def computer_to_phone(numbers):
+    return numbers.translate(str.maketrans('123789', '789123'))
+```
