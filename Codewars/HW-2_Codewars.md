@@ -133,3 +133,13 @@ def computer_to_phone(numbers):
 def computer_to_phone(numbers):
     return numbers.translate(str.maketrans('123789', '789123'))
 ```
+### Задача 6.
+When provided with a String, capitalize all vowels
+For example:
+Input : "Hello World!"
+Output : "HEllO WOrld!"
+Note: Y is not a vowel in this kata.
+```
+def swap(st):
+    return st.translate(str.maketrans('euioa', 'EUIOA'))
+```
