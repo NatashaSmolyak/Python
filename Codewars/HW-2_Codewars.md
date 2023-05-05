@@ -151,12 +151,14 @@ Your job here is to write a function, which takes a sorted array ary and a value
 Do not modify the input.
 
 Some examples:
+```
 keep_order([1, 2, 3, 4, 7], 5) #=> 4
                       ^(index 4)
 keep_order([1, 2, 3, 4, 7], 0) #=> 0
           ^(index 0)
 keep_order([1, 1, 2, 2, 2], 2) #=> 2
                 ^(index 2)
+```            
 
 
 **Решение 1**
