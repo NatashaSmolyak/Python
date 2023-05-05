@@ -139,7 +139,39 @@ For example:
 Input : "Hello World!"
 Output : "HEllO WOrld!"
 Note: Y is not a vowel in this kata.
+
+**Решение 1**
 ```
 def swap(st):
     return st.translate(str.maketrans('euioa', 'EUIOA'))
 ```
+### Задача 7.
+Your job here is to write a function (keepOrder in JS/CoffeeScript, keep_order in Ruby/Crystal/Python, keeporder in Julia), which takes a sorted array ary and a value val, and returns the lowest index where you could insert val to maintain the sorted-ness of the array. The input array will always be sorted in ascending order. It may contain duplicates.
+
+Do not modify the input.
+
+Some examples:
+keep_order([1, 2, 3, 4, 7], 5) #=> 4
+                      ^(index 4)
+keep_order([1, 2, 3, 4, 7], 0) #=> 0
+          ^(index 0)
+keep_order([1, 1, 2, 2, 2], 2) #=> 2
+                ^(index 2)
+
+Also check out my other creations — Naming Files, Elections: Weighted Average, Identify Case, Split Without Loss, Adding Fractions, Random Integers, Implement String#transpose, Implement Array#transpose!, Arrays and Procs #1, and Arrays and Procs #2.
+
+**Решение 1**
+```
+def keep_order(ary, val):
+    ary.append(val)
+    ary.sort()
+    position = ary.index(val)
+    return position
+```
+**Решение 2**
+```
+from bisect import bisect_left
+def keep_order(arr, val):
+    return bisect_left(arr, val)
+```
+
