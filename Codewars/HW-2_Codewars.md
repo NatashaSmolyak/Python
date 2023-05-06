@@ -160,7 +160,6 @@ keep_order([1, 1, 2, 2, 2], 2) #=> 2
                 ^(index 2)
 ```            
 
-
 **Решение 1**
 ```
 def keep_order(ary, val):
@@ -175,4 +174,13 @@ from bisect import bisect_left
 def keep_order(arr, val):
     return bisect_left(arr, val)
 ```
+### Задача 8.
+Make your strings more nerdy: Replace all 'a'/'A' with 4, 'e'/'E' with 3 and 'l' with 1 e.g. "Fundamentals" --> "Fund4m3nt41s"
+
+**Решение 1**
+```
+def nerdify(txt):
+    return txt.translate(str.maketrans('aAeEl', '44331'))
+```
+
 
