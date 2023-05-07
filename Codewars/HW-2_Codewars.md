@@ -182,5 +182,27 @@ Make your strings more nerdy: Replace all 'a'/'A' with 4, 'e'/'E' with 3 and 'l'
 def nerdify(txt):
     return txt.translate(str.maketrans('aAeEl', '44331'))
 ```
+### Задача 9.
+In this kata, you need to write a function that takes a string and a letter as input and then returns the index of the second occurrence of that letter in the string. If there is no such letter in the string, then the function should return -1. If the letter occurs only once in the string, then -1 should also be returned.
 
+Examples:
+second_symbol('Hello world!!!','l') --> 3
+second_symbol('Hello world!!!', 'A') --> -1
 
+**Решение 1**
+```
+def second_symbol(s, symbol):
+    k = 0
+    for i in range(len(s)):
+        if s[i] == symbol:
+            k = k + 1
+        if k == 2:
+            return i
+    return -1
+```
+**Решение 2**
+```
+def second_symbol(s, symbol):
+    return s.find(symbol, s.find(symbol)+1)
+
+```
