@@ -104,7 +104,7 @@ because only one number doesn't divide integer by any of 2, 3, 5
 def real_numbers(n):
     return n - n//2 - n//3 - n//5 + n//6 + n//10 + n//15 - n//30
 ```
-### Задача 5.
+### Задача 7.
 Solve the horror of unstandardized keypads by providing a function that converts computer input to a number as if it was typed on a phone.
 
 Example:
@@ -133,7 +133,7 @@ def computer_to_phone(numbers):
 def computer_to_phone(numbers):
     return numbers.translate(str.maketrans('123789', '789123'))
 ```
-### Задача 6.
+### Задача 8.
 When provided with a String, capitalize all vowels
 For example:
 Input : "Hello World!"
@@ -145,7 +145,7 @@ Note: Y is not a vowel in this kata.
 def swap(st):
     return st.translate(str.maketrans('euioa', 'EUIOA'))
 ```
-### Задача 7.
+### Задача 9.
 Your job here is to write a function, which takes a sorted array ary and a value val, and returns the lowest index where you could insert val to maintain the sorted-ness of the array. The input array will always be sorted in ascending order. It may contain duplicates.
 
 Do not modify the input.
@@ -174,7 +174,7 @@ from bisect import bisect_left
 def keep_order(arr, val):
     return bisect_left(arr, val)
 ```
-### Задача 8.
+### Задача 10.
 Make your strings more nerdy: Replace all 'a'/'A' with 4, 'e'/'E' with 3 and 'l' with 1 e.g. "Fundamentals" --> "Fund4m3nt41s"
 
 **Решение 1**
@@ -182,7 +182,7 @@ Make your strings more nerdy: Replace all 'a'/'A' with 4, 'e'/'E' with 3 and 'l'
 def nerdify(txt):
     return txt.translate(str.maketrans('aAeEl', '44331'))
 ```
-### Задача 9.
+### Задача 11.
 In this kata, you need to write a function that takes a string and a letter as input and then returns the index of the second occurrence of that letter in the string. If there is no such letter in the string, then the function should return -1. If the letter occurs only once in the string, then -1 should also be returned.
 
 Examples:
@@ -206,7 +206,7 @@ def second_symbol(s, symbol):
     return s.find(symbol, s.find(symbol)+1)
 
 ```
-### Задача 10.
+### Задача 12.
 Expected Behaviour
 Function should return a dictionary/Object/Hash with "status" as a key, whose value can : "busy" or "available" depending on the truth value of the argument is_busy.
 But as you will see after clicking RUN or ATTEMPT this code has several bugs, please fix them.

@@ -17,9 +17,6 @@ https://www.codewars.com/kata/55c90cad4b0fe31a7200001f
 https://www.codewars.com/kata/56cd44e1aa4ac7879200010b
 https://www.codewars.com/kata/596fba44963025c878000039
 https://www.codewars.com/kata/59c1302ecb7fb48757000013
-
-
-
 https://www.codewars.com/kata/57fae964d80daa229d000126
 https://www.codewars.com/kata/57e1e61ba396b3727c000251
 https://www.codewars.com/kata/55a14f75ceda999ced000048
